@@ -4,18 +4,21 @@ public:
         int n = arr.size();
         if(n == 0) return 0;
 
-        int i = 0, j=1;
+        int i = 0;
+        int j = 1;
+        int res = 1;
 
-        while(j<n)
-        {
-            if(arr[j] != arr[i]) {
-                i++;
-                arr[i] = arr[j];
-            
+        while(j < n) {
+            if(arr[j] == arr[i]) {
+                j++;
+            } else {
+                arr[i+1] = arr[j]; // write first
+                i++;               // then move i
+                j++;
+                res++;
             }
-            j++;
         }
 
-        return i+1;
+        return res;
     }
 };
