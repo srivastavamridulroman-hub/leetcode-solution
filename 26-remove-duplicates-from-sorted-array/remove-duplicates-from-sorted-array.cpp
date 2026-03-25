@@ -4,19 +4,18 @@ public:
         int n = arr.size();
         if(n == 0) return 0;
 
-        int i = 0;
-        int j = 1;
+        int i = 0, j=1;
 
-        while(j < n) {
-            if(arr[j] == arr[i]) {
-                j++;
-            } else {
+        while(j<n)
+        {
+            if(arr[j] != arr[i]) {
                 i++;
                 arr[i] = arr[j];
-                j++;
+            
             }
+            j++;
         }
 
-        return i + 1;
+        return i+1;
     }
 };
