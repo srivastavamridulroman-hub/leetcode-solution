@@ -14,6 +14,6 @@ class Solution(object):
             elif nums[mid] == 1:
                 mid += 1
 
-            else:  # nums[mid] == 2
+            else:  
                 nums[mid], nums[high] = nums[high], nums[mid]
                 high -= 1
